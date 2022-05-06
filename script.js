@@ -16,9 +16,17 @@ function addItem(e) {
 
 function displayItems(ingridients, ingridientsList) {
   console.log(ingridients, ingridientsList);
-  ingridientsList.innerHTML = ingridients.map((ingridient, index) => {
-    return `<ul>${ingridient.text}</ul>`;
-  });
+  ingridientsList.innerHTML = ingridients
+    .map((ingridient, index) => {
+      return `<ul>${ingridient.text}</ul>`;
+    })
+    .join("");
 }
 
 addItemsForm.addEventListener("submit", addItem);
+
+let ab = [1, 2, 3];
+let result = ab.map((e) => e * 3);
+console.log(ab);
+console.log(result);
+console.log(ab);
